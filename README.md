@@ -88,4 +88,4 @@
 
 ## 鸣谢
 
-​	[原仓库鸣谢列表](​https://github.com/DangoTown/MCDR-whitelist-manager#鸣谢) 以及 [SinBing](https://github.com/Sinbing)
+​	[原仓库鸣谢列表](https://github.com/Lazy-Bing-Server/MCDR-offline-whitelist-manager#%E9%B8%A3%E8%B0%A2) 以及 [SinBing](https://github.com/Sinbing)
