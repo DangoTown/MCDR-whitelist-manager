@@ -97,7 +97,7 @@ def get_online_uuid_m1(player_name: str):
         js = json.loads(urlopen(url, timeout=10).read().decode('utf8'))
     except Exception as e:
         flag = False
-    return js['uuid'], flag
+    return js['splitteduuid'], flag
 
 
 def get_offline_uuid_m2(info: Info, player_name: str):
@@ -208,8 +208,8 @@ def on_user_info(server: PluginServerInterface, info: Info):
         try:
             if args[1] == 'add':
                 if server.get_permission_level(info) >= 3:
-                    if args[2] != '':
-                        if args[3] == '':
+                    if len(args) > 1:
+                        if len(args) <= 2:
                             online = False
                         elif re.search('o|online', args[3]):
                             online = True
@@ -223,7 +223,7 @@ def on_user_info(server: PluginServerInterface, info: Info):
 
             elif args[1] == 'remove':
                 if server.get_permission_level(info) >= 3:
-                    if args[2] != '':
+                    if len(args) > 1:
                         remove_whitelist(info, args[2])
                     else:
                         Dprint(info, '你不告诉我名字我删谁啊')
