@@ -208,8 +208,8 @@ def on_user_info(server: PluginServerInterface, info: Info):
         try:
             if args[1] == 'add':
                 if server.get_permission_level(info) >= 3:
-                    if len(args) > 1:
-                        if len(args) <= 2:
+                    if len(args) > 2:
+                        if len(args) <= 3:
                             online = False
                         elif re.search('o|online', args[3]):
                             online = True
@@ -223,7 +223,7 @@ def on_user_info(server: PluginServerInterface, info: Info):
 
             elif args[1] == 'remove':
                 if server.get_permission_level(info) >= 3:
-                    if len(args) > 1:
+                    if len(args) > 2:
                         remove_whitelist(info, args[2])
                     else:
                         Dprint(info, '你不告诉我名字我删谁啊')
