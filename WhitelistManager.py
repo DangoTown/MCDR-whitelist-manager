@@ -82,7 +82,7 @@ def get_playerdata_filename_list():
 
 def get_offline_uuid_m1(player_name: str):
     flag = True
-    url = 'http://tools.glowingmines.eu/convertor/nick/' + player_name
+    url = 'https://api.yokinanya.icu/mcuuid/' + player_name
     try:
         js = json.loads(urlopen(url, timeout=10).read().decode('utf8'))
     except Exception as e:
@@ -92,7 +92,7 @@ def get_offline_uuid_m1(player_name: str):
 
 def get_online_uuid_m1(player_name: str):
     flag = True
-    url = 'http://tools.glowingmines.eu/convertor/nick/' + player_name
+    url = 'https://api.yokinanya.icu/mcuuid/' + player_name
     try:
         js = json.loads(urlopen(url, timeout=10).read().decode('utf8'))
     except Exception as e:
